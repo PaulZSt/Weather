@@ -25,7 +25,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->getData(WeatherInterface::ID);
     }
@@ -33,7 +33,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function getWeather()
+    public function getWeather(): string
     {
         return $this->getData(WeatherInterface::WEATHER);
     }
@@ -41,7 +41,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): string
     {
         return $this->getData(WeatherInterface::CREATED_AT);
     }
@@ -49,7 +49,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function setId($id)
+    public function setId($id): WeatherInterface
     {
         $this->setData(WeatherInterface::ID, $id);
 
@@ -60,7 +60,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function setWeather($weather)
+    public function setWeather($weather): WeatherInterface
     {
         $this->setData(WeatherInterface::WEATHER, $weather);
 
@@ -70,7 +70,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt): WeatherInterface
     {
         $this->setData(WeatherInterface::CREATED_AT, $createdAt);
 

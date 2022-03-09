@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Elogic\WeatherInfo\Controller\Adminhtml\Archive;
 
 use Magento\Backend\App\Action\Context;
@@ -39,10 +41,10 @@ class Index extends Action
         return $resultPage;
     }
 
-    /*
+    /**
      * Check permission via ACL resource
      */
-    protected function _isAllowed()
+    protected function _isAllowed(): bool
     {
         return $this->_authorization->isAllowed('Elogic_WeatherInfo::weatherarchive');
     }

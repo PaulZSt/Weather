@@ -2,7 +2,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="footer">
-            <block class="Elogic\WeatherInfo\Block\Weather" name="weather" template="Elogic_WeatherInfo::weather.phtml" before="-">
+            <block class="Elogic\WeatherInfo\Block\Weather"
+                   name="weather"
+                   template="Elogic_WeatherInfo::weather.phtml"
+                   ifconfig="weatherinfo/general/enable"
+                   before="-">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="types" xsi:type="array"/>

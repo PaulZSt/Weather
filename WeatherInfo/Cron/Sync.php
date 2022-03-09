@@ -1,4 +1,6 @@
-<?php
+<?
+
+declare(strict_types=1);
 
 namespace Elogic\WeatherInfo\Cron;
 
@@ -54,7 +56,6 @@ class Sync
         $this->weatherFactory = $weatherFactory;
         $this->weatherRepository = $weatherRepository;
         $this->json = $json;
-
     }
 
     /**

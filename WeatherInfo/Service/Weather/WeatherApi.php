@@ -99,7 +99,7 @@ class WeatherApi implements WeatherApiInterface
      * @param $requestMethod
      * @return mixed
      */
-    private function doRequest($uriEndpoint, $params = [], $method)
+    private function doRequest(string $uriEndpoint, array $params = [], string $method)
     {
         $client = $this->clientFactory->create(
             ['config' =>

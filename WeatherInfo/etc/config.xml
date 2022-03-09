@@ -4,7 +4,7 @@
     <default>
         <weatrherinfo>
             <general>
-                <enable>0</enable>
+                <enable>1</enable>
                 <api_url>https://api.openweathermap.org/</api_url>
                 <city_code>lublin,pl</city_code>
             </general>

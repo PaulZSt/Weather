@@ -17,7 +17,7 @@ interface WeatherSearchResultsInterface extends SearchResultsInterface
      *
      * @return \Elogic\WeatherInfo\Api\Data\WeatherInterface[]
      */
-    public function getItems();
+    public function getItems(): array;
 
     /**
      * Set weather list.
@@ -25,5 +25,5 @@ interface WeatherSearchResultsInterface extends SearchResultsInterface
      * @param \Elogic\WeatherInfo\Api\Data\WeatherInterface[] $items
      * @return $this
      */
-    public function setItems(array $items);
+    public function setItems(array $items): WeatherSearchResultsInterface;
 }

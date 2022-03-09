@@ -46,6 +46,7 @@ class Config
      */
     public function getConfig($path, $scopeCode = null)
     {
+        $data = $this->scopeConfig->getValue($path, ScopeInterface::SCOPE_STORE, $scopeCode);
         return $this->scopeConfig->getValue($path, ScopeInterface::SCOPE_STORE, $scopeCode);
     }
 
@@ -66,7 +67,7 @@ class Config
      * @param null $storeId
      * @return bool
      */
-    public function isDebug($scopeCode = null)
+    public function isDebug($scopeCode = null): bool
     {
         return (bool)$this->getConfig(self::XML_PATH_WEATRHERINFO_DEBUG, $scopeCode);
     }
@@ -77,7 +78,7 @@ class Config
      * @param null $scopeCode
      * @return string
      */
-    public function getApiUrl($scopeCode = null)
+    public function getApiUrl($scopeCode = null): string
     {
         return $this->getConfig(self::XML_PATH_WEATRHERINFO_API_URL, $scopeCode);
     }
@@ -88,7 +89,7 @@ class Config
      * @param null $scopeCode
      * @return string
      */
-    public function getCityCode($scopeCode = null)
+    public function getCityCode($scopeCode = null): string
     {
         return $this->getConfig(self::XML_PATH_WEATRHERINFO_CITY_CODE, $scopeCode);
     }

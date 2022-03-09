@@ -18,33 +18,32 @@ interface WeatherRepositoryInterface
      * @return Data\WeatherInterface
      * @throws CouldNotSaveException
      */
-    public function save(WeatherInterface $weather);
+    public function save(WeatherInterface $weather): WeatherInterface;
 
     /**
      * @param $weatherId
      * @return mixed
      * @throws NoSuchEntityException
      */
-    public function getById($weatherId);
+    public function getById(int $weatherId): WeatherInterface;
 
     /**
      * @param SearchCriteriaInterface $searchCriteria
      * @return mixed
      */
-    public function getList(SearchCriteriaInterface $searchCriteria);
+    public function getList(SearchCriteriaInterface $searchCriteria): SearchCriteriaInterface;
 
     /**
-     * @param Data\WeatherInterface $weather
-     * @return bool
-     * @throws CouldNotDeleteException
+     * @param WeatherInterface $weather
+     * @return WeatherInterface
      */
-    public function delete(WeatherInterface $weather);
+    public function delete(WeatherInterface $weather): WeatherInterface;
 
     /**
      * @param $weatherId
-     * @return bool
+     * @return WeatherInterface
      * @throws CouldNotDeleteException
      * @throws NoSuchEntityException
      */
-    public function deleteById($weatherId);
+    public function deleteById(int $weatherId): WeatherInterface;
 }

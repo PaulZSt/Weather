@@ -14,7 +14,6 @@ use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 
-
 /**
  * Class WeatherRepository
  * @package Elogic\WeatherInfo\Model
@@ -66,7 +65,7 @@ class WeatherRepository implements WeatherRepositoryInterface
      * @return Data\WeatherInterface
      * @throws CouldNotSaveException
      */
-    public function save(Data\WeatherInterface $weather)
+    public function save(Data\WeatherInterface $weather): Data\WeatherInterface
     {
         try {
             $this->resource->save($weather);
@@ -85,7 +84,7 @@ class WeatherRepository implements WeatherRepositoryInterface
      * @return mixed
      * @throws NoSuchEntityException
      */
-    public function getById($weatherId)
+    public function getById(int $weatherId) : Data\WeatherInterface
     {
         $weather = $this->weatherInterfaceFactory->create();
         $this->resource->load($weather, $weatherId);
@@ -101,7 +100,7 @@ class WeatherRepository implements WeatherRepositoryInterface
      * @param SearchCriteriaInterface $searchCriteria
      * @return mixed|Data\WeatherSearchResultsInterface
      */
-    public function getList(SearchCriteriaInterface $searchCriteria)
+    public function getList(SearchCriteriaInterface $searchCriteria): SearchCriteriaInterface
     {
         $collection = $this->weatherCollectionFactory->create();
 
@@ -173,7 +172,7 @@ class WeatherRepository implements WeatherRepositoryInterface
      * @return bool
      * @throws CouldNotDeleteException
      */
-    public function delete(Data\WeatherInterface $weather)
+    public function delete(Data\WeatherInterface $weather): Data\WeatherInterface
     {
         try {
             $this->resource->delete($weather);
@@ -193,7 +192,7 @@ class WeatherRepository implements WeatherRepositoryInterface
      * @throws CouldNotDeleteException
      * @throws NoSuchEntityException
      */
-    public function deleteById($weatherId)
+    public function deleteById(int $weatherId): Data\WeatherInterface
     {
         return $this->delete($this->getById($weatherId));
     }

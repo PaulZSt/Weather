@@ -35,7 +35,7 @@ class Logger
      * @param $data
      * @return void
      */
-    public function debugData($data)
+    public function debugData($data): void
     {
         if ($this->config->isDebug()) {
             if (is_string($data)) {

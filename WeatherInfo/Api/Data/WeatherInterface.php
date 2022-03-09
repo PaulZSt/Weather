@@ -22,28 +22,28 @@ interface WeatherInterface
      *
      * @return int|null
      */
-    public function getId();
+    public function getId(): ?int;
 
     /**
      * Get Weather
      *
      * @return string
      */
-    public function getWeather();
+    public function getWeather(): string;
     
     /**
      * Get Created At
      *
      * @return string
      */
-    public function getCreatedAt();
+    public function getCreatedAt(): string;
     
     /**
      * Set ID
      *
      * @return WeatherInterface
      */
-    public function setId($id);
+    public function setId(int $id): WeatherInterface;
 
     /**
      * Set Weather
@@ -51,7 +51,7 @@ interface WeatherInterface
      * @param $updatedAt
      * @return WeatherInterface
      */
-    public function setWeather($weather);
+    public function setWeather(string $weather): WeatherInterface;
 
     /**
      * Set Created At
@@ -59,5 +59,5 @@ interface WeatherInterface
      * @param $createdAt
      * @return WeatherInterface
      */
-    public function setCreatedAt($createdAt);
+    public function setCreatedAt(string $createdAt): WeatherInterface;
 }

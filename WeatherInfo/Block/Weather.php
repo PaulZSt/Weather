@@ -35,7 +35,7 @@ class Weather extends Template
     /**
      * @return string
      */
-    public function getJsLayout()
+    public function getJsLayout(): string
     {
         return $this->jsonHelper->serialize($this->jsLayout);
     }
