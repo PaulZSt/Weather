@@ -1,0 +1,16 @@
+
+<?php
+/**
+* @var \Elogic\WeatherInfo\Block\Weather $block
+*/
+?>
+<div class="weather-body" data-bind="scope: 'weather-component'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app":  <?= /* @escapeNotVerified */ $block->getJsLayout();?>
+        }
+    }
+</script>
