@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Elogic\WeatherInfo\Model\ResourceModel\Weather;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;

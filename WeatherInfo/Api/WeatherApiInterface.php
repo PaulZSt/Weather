@@ -10,5 +10,5 @@ namespace Elogic\WeatherInfo\Api;
  */
 interface WeatherApiInterface
 {
-    public function getWeather();
+    public function getWeather(): array;
 }

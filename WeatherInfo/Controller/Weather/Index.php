@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Elogic\WeatherInfo\Controller\Weather;
 
 use Magento\Framework\App\Action\Context;
@@ -63,7 +65,7 @@ class Index extends Action
         $response = [
             'error' => __('Sorry. There is a problem with weather info.')
         ];
-        
+
         try {
             $data = $this->weatherFactory->create()->getCollection()->getLastItem()->getWeather();
 
@@ -73,7 +75,7 @@ class Index extends Action
                 $response = [
                     'temp' => $weather['main']['temp']
                 ];
-                
+
             } else {
                 $response = [
                     'error' => __('Sorry. Waiting for data')
@@ -82,11 +84,11 @@ class Index extends Action
         } catch (\Exception $e) {
             $this->logger->error($e->getMessage());
         }
-        
-        $message = $this->json->serialize($message);
+
+        $response = $this->json->serialize($response);
         $resultPage = $this->resultJsonFactory->create();
         $resultPage->setHttpResponseCode(200);
-        $resultPage->setData($message);
+        $resultPage->setData($response);
         return $resultPage;
 
     }

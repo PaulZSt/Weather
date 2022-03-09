@@ -21,10 +21,12 @@ define([
                         let weather = JSON.parse(data);
                             console.log(weather);
                         let temp = weather.temp ? weather.temp : null;
-                        if(temp) {
-                            $('.temperature .data').text(temp ? parseInt(temp) : "-");
-                        } else {
-                            $('.message').text(weather.message);
+                         if(temp) {
+                             $('.temperature .data').text(temp ? parseInt(temp) : "-");
+                             $('.temperature').show();
+                         } else {
+                            $('.message .data').text(weather.error);
+                            $('.temperature').hide();
                         }
                     });
                 }

@@ -64,7 +64,7 @@ class WeatherApi implements WeatherApiInterface
     /**
      * @return array|bool|float|int|mixed|string|null
      */
-    public function getWeather()
+    public function getWeather(): array
     {
         try {
             $request = $this->config->getApiUrl().sprintf(self::API_REQUEST, $this->config->getCityCode());
