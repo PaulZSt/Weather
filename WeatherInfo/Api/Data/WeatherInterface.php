@@ -29,14 +29,14 @@ interface WeatherInterface
      *
      * @return string
      */
-    public function getWeather(): string;
+    public function getWeather(): ?string;
     
     /**
      * Get Created At
      *
      * @return string
      */
-    public function getCreatedAt(): string;
+    public function getCreatedAt(): ?string;
     
     /**
      * Set ID

@@ -18,6 +18,10 @@ class Index extends Action
      */
     protected $_resultPageFactory;
 
+    /**
+     * @param Context $context
+     * @param PageFactory $resultPageFactory
+     */
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory

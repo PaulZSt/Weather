@@ -7,6 +7,7 @@
                 <enable>1</enable>
                 <api_url>https://api.openweathermap.org/</api_url>
                 <city_code>lublin,pl</city_code>
+                <api_key>8b04b8e8369f4615878dc1717b109882</api_key>
             </general>
             <debug>
                 <debug>0</debug>

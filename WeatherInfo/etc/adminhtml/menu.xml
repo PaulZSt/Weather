@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Elogic_WeatherInfo::weatherinfo" title="Weather Info" module="Elogic_WeatherInfo" sortOrder="50" parent="Magento_Sales::sales" resource="Elogic_WeatherInfo::weatherinfo"/>
+        <add id="Elogic_WeatherInfo::weatherinfo" title="Weather Info" module="Elogic_WeatherInfo" sortOrder="50" parent="Magento_Backend::marketing" resource="Elogic_WeatherInfo::weatherinfo"/>
         <add id="Elogic_WeatherInfo::weatherarchive" title="Weather Archive" module="Elogic_WeatherInfo" sortOrder="55" parent="Elogic_WeatherInfo::weatherinfo" action="weatherinfo/archive" resource="Elogic_WeatherInfo::weatherarchive"/>
     </menu>
 </config>

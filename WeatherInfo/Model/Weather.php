@@ -33,7 +33,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function getWeather(): string
+    public function getWeather(): ?string
     {
         return $this->getData(WeatherInterface::WEATHER);
     }
@@ -41,7 +41,7 @@ class Weather extends AbstractModel implements WeatherInterface
     /**
      * @inheritdoc
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->getData(WeatherInterface::CREATED_AT);
     }

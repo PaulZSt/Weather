@@ -19,6 +19,7 @@ class Config
     const XML_PATH_WEATRHERINFO_API_URL = 'weatherinfo/general/api_url';
     const XML_PATH_WEATRHERINFO_CITY_CODE = 'weatherinfo/general/city_code';
     const XML_PATH_WEATRHERINFO_DEBUG= 'weatherinfo/debug/debug';
+    const XML_PATH_WEATRHERINFO_API_KEY= 'weatherinfo/general/api_key';
 
     /**
      * @var ScopeConfigInterface
@@ -81,6 +82,17 @@ class Config
     public function getApiUrl($scopeCode = null): string
     {
         return $this->getConfig(self::XML_PATH_WEATRHERINFO_API_URL, $scopeCode);
+    }
+
+    /**
+     * Get API Key
+     *
+     * @param null $scopeCode
+     * @return string
+     */
+    public function getApiKey($scopeCode = null): string
+    {
+        return $this->getConfig(self::XML_PATH_WEATRHERINFO_API_KEY, $scopeCode);
     }
     
     /**

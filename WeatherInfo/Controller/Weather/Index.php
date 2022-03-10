@@ -78,7 +78,7 @@ class Index extends Action
 
             } else {
                 $response = [
-                    'error' => __('Sorry. Waiting for data')
+                    'error' => __('Sorry. Waiting for weather data')
                 ];
             }
         } catch (\Exception $e) {

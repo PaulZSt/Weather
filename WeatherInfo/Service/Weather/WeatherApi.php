@@ -16,7 +16,7 @@ class WeatherApi implements WeatherApiInterface
     /**
      * Request without city code
      */
-    const API_REQUEST = 'data/2.5/weather?q=%s&units=metric&appid=8b04b8e8369f4615878dc1717b109882';
+    const API_REQUEST = 'data/2.5/weather?q=%s&units=metric&appid=%s';
 
     /**
      * Status success
@@ -62,12 +62,16 @@ class WeatherApi implements WeatherApiInterface
     }
 
     /**
-     * @return array|bool|float|int|mixed|string|null
+     * @return array
      */
     public function getWeather(): array
     {
         try {
-            $request = $this->config->getApiUrl().sprintf(self::API_REQUEST, $this->config->getCityCode());
+            $request = $this->config->getApiUrl().sprintf(
+                self::API_REQUEST,
+                $this->config->getCityCode(),
+                $this->config->getApiKey()
+            );
             $response = $this->doRequest(
                 $request,
                 [],

@@ -4,7 +4,7 @@
     <system>
         <section id="weatherinfo" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1" >
             <label>Weather Info</label>
-            <tab>sales</tab>
+            <tab>general</tab>
             <resource>Elogic_WeatherInfo::weatrherinfo</resource>
             <group id="general" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
@@ -19,12 +19,19 @@
                     </depends>
                     <comment>Example: https://api.openweathermap.org/</comment>
                 </field>
-                <field id="city_code" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" >
+                <field id="api_key" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>API Key</label>
+                    <depends>
+                        <field id="*/*/enable">1</field>
+                    </depends>
+                    <comment>Generate key on api.openweathermap.org</comment>
+                </field>
+                <field id="city_code" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" >
                     <label>City code</label>
                     <depends>
                         <field id="*/*/enable">1</field>
                     </depends>
-                    <comment>Note format: city, country. City/code list can be found on openweathermap.org</comment>
+                    <comment>Note format: city,country. City/code list can be found on openweathermap.org</comment>
                 </field>
             </group>
             <group id="debug" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
